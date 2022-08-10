@@ -1,0 +1,85 @@
+EPN, Wed Aug 10 05:18:56 2022
+
+Getting update virus counts:
+
+Below is copied from:
+https://github.com/nawrockie/talk_job_nlm_20190115/blob/master/00NOTES.txt
+and modified.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EPN, Wed Aug 10 05:19:41 2022
+% EPN, Thu Oct 10 11:42:49 2019 (vadr manuscript)
+%
+% NOTES on where these numbers came from:
+%
+% 1. Get list of top viral species and counts of seqs for each.
+%    Perform an Entrez search in nucleotide for ``viruses'' (enter viruses without quotes)
+%    https://www.ncbi.nlm.nih.gov/nuccore/?term=viruses
+%    In right hand column is ``Results by taxon'' and ``Top organisms'', 
+%    click on ``More''. This lists the top viral species.
+%    Below are the species and sequence counts they get
+%    displayed as of 08.10.22:
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+New list:
+%    Severe acute respiratory syndrome-related coronavirus (6045832)
+%    Human immunodeficiency virus 1 (1033995)
+%    Influenza A virus (833505)
+%    Hepacivirus C (259870)
+%    Hepatitis B virus (124490)
+%    Influenza B virus (118799)
+%    Rotavirus A (96690)
+%    Norwalk virus (51748)
+%    Simian immunodeficiency virus (50454)
+% NV Cancer pagurus (48899)
+%    Dengue virus (39830)
+%    Enterovirus A (39527)
+%    Porcine reproductive and respiratory syndrome virus (38538)
+% NV Graminella nigrifrons (37538)
+%    Human orthopneumovirus (32835)
+% NV Arabidopsis thaliana (32558)
+% NV Paramikrocytos canceri (30487)
+%    Enterovirus B (28494)
+%    Lyssavirus rabies (26798)
+%    Siphoviridae sp. (22380)
+%    All other taxa (1457547)
+
+Manually looked for the following (because they were in 2019 list but
+not in new list)
+"West Nile Virus" 49579 (not sure why this didn't show up in initial search)
+"Measles morbillivirus" 20966
+
+2019 list:
+%    Human immunodeficiency virus 1 (850115)
+%    Influenza A virus (684026)
+%    Hepacivirus C (244533)
+%    Hepatitis B virus (114306)
+%    Influenza B virus (100373)
+%    Rotavirus A (73375)
+%    Simian immunodeficiency virus (44734)
+%    Norwalk virus (40925)
+% NV Graminella nigrifrons (37538)
+% NV Arabidopsis thaliana (32558)
+%    Enterovirus A (31478)
+%    Porcine reproductive and respiratory syndrome virus (29081)
+%    Dengue virus (28564)
+%    Human orthopneumovirus (24384)
+%    Enterovirus B (23865)
+%    Rabies lyssavirus (23771)
+% NV Vibrio splendidus (22114)
+%    West Nile virus (21563)
+% NV Vibrio lentus (20638)
+%    Measles morbillivirus (17233)
+%    All other taxa (1111914)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 2. Get taxids for each species.
+%    In this list, click on the number of seqs after each virus, which 
+%    is a link that triggers a new entrez search for just that 
+%    species. The new page will have the taxid listed in the 
+%    search box. 
+%
+% 3. Look up each tax id in NCBI taxonomy to determine 'family'.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
