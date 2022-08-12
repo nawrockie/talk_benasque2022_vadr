@@ -172,6 +172,7 @@ SARS-CoV-2                     & 3,026,073 & 6,052,165 \\
 \begin{itemize}
 \item Foosh pipelines exist for 16S, 23S, ITS (BLAST-based) and
     Influenza (FLAN)
+\item False negatives are better than false positives because indexer or submitter can manually examine them
 \end{itemize}
 
 \vfill
@@ -610,11 +611,11 @@ Dengue partial  (DP)    & 20,973   & 50    & 10370    & 17,276   & 3,697    & \t
 
 \medskip
 \normalsize
-\textbf{VADR is portable so submitters can run on their data prior to
+\textbf{VADR is portable so submitters can run on their data \\ prior to
   submission to save time}
 
 \normalsize
-\textbf{Sequences processed with VADR will include annotations of RNAs
+\textbf{Sequences processed with VADR will include annotations of CDS, mature peptides, and RNAs
   (\texttt{stem\_loop} and \texttt{ncRNA}) from models}
 
 \end{center}
@@ -660,6 +661,13 @@ Mar       & 2020     &332       &422       \\
 Apr       & 2020     &1541      &1963      \\ 
 May       & 2020     &2974      &4937      \\ 
 Jun       & 2020     &3394      &8331      \\ 
+Jul       & 2020     &3604      &11,935    \\ 
+Aug       & 2020     &3818      &15,753    \\ 
+Sep       & 2020     &6731      &22,484    \\ 
+Oct       & 2020     &11,939    &34,423    \\ 
+Nov       & 2020     &4274      &38,697    \\ 
+Dec       & 2020     &4530      &43,227    \\ 
+& & & \\
 \end{tabular}
 \end{center}
 
@@ -741,6 +749,13 @@ total running time, CPU days           &1.1            &10.2           &\textcol
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{slide}
 \begin{center}
+
+%\begin{itemize}
+%  \item CDC expected large increase in sequence data submissions
+%  \item Needed to quickly accelerate SARS-CoV-2 annotation
+%  \item \emph{WARNING: brutal hacks implemented and explained next}
+%\end{itemize}  
+
 \normalsize{\textbf{SARS-CoV-2 sequences differ from Norovirus and Dengue virus \\ in several ways that impact VADR processing}}
 
 \scriptsize
@@ -759,12 +774,6 @@ required RAM                           &8Gb            &8Gb            &\textcol
 total running time, CPU days           &1.1            &10.2           &\textcolor{red}{6187.6}         \\
 \end{tabular}
 \end{center}
-
-\begin{itemize}
-  \item CDC expected large increase in sequence data submissions
-  \item Needed to quickly accelerate SARS-CoV-2 annotation
-  \item \emph{WARNING: brutal hacks implemented and explained next}
-\end{itemize}  
 
 \vfill
 \end{slide}
@@ -976,19 +985,20 @@ Jul       & 2022     &101,737   &2,790,725 \\
   \begin{itemize}
     \item divergent sequences, regions, repeats, introns, gene order are problematic
   \end{itemize}
-\item slow
+\item slow (SARS-CoV-2 speedups are not general)
+\item SARS-CoV-2 sequences that fail are kept out of the database
 \end{itemize}
 
-%\normalsize
-%\begin{center}
-%  \textbf{Future directions}
-%\end{center}
+\normalsize
+\begin{center}
+  \textbf{Future directions}
+\end{center}
 
-%\small
-%\begin{itemize}
-%\item extend to more viruses
-%\item alignment-based models for viruses (testing with HCV)
-%\end{itemize}
+\small
+\begin{itemize}
+\item extend to more viruses
+\item alignment-based models for viruses
+\end{itemize}
 
 \vfill
 \end{slide}
@@ -1013,7 +1023,7 @@ Jul       & 2022     &101,737   &2,790,725 \\
 \includegraphics[width=6in]{figs/ribovore-paper-title}
 %\textbf{Ribovore: ribosomal RNA sequence analysis for GenBank}
 
-\includegraphics[height=5in]{figs/ribovore}
+\includegraphics[height=5.5in]{figs/ribovore}
 \end{center}
 
 \vfill
